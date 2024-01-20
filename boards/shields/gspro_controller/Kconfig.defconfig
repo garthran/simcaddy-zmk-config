@@ -1,0 +1,8 @@
+
+if GSPRO_CONTROLLER
+
+config ZMK_KEYBOARD_NAME
+	default "GSProController"
+
+endif
+

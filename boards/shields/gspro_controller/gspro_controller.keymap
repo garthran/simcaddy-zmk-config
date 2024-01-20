@@ -1,0 +1,25 @@
+/*
+ * Copyright (c) 2020 Pete Johanson, Richard Jones
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+//#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        
+        default_layer {
+            bindings = <
+//	    &bt BT_IDENT_NEXT &bt BT_IDENT_CLR 
+            // Pin0         Pin1            Pin2           Pin3       Pin4  Pin5  Pin6
+        &kp LEFT_ARROW &kp RIGHT_ARROW &kp UP_ARROW &kp DOWN_ARROW &kp B &kp K & kp I
+	    >;
+        };
+    };
+};
+
+
