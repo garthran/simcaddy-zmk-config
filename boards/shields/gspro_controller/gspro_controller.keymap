@@ -13,11 +13,10 @@
         compatible = "zmk,keymap";
         
         default_layer {
+                // Pin0             Pin1                Pin2            Pin3            Pin4    Pin5    Pin6
             bindings = <
-//	    &bt BT_IDENT_NEXT &bt BT_IDENT_CLR 
-            // Pin0         Pin1            Pin2           Pin3       Pin4  Pin5  Pin6
-        &kp LEFT_ARROW &kp RIGHT_ARROW &kp UP_ARROW &kp DOWN_ARROW &kp B &kp K & kp I
-	    >;
+                &kp LEFT_ARROW      &kp RIGHT_ARROW     &kp UP_ARROW    &kp DOWN_ARROW  &kp B   &kp K   & kp I
+	        >;
         };
     };
 };
