@@ -15,47 +15,47 @@
         upKey: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <200>;
 
             // Move Up, Club Up, + (start sim), - (start skytrak), _ (shutdown sim)
             
             bindings = <&kp UP>, <&kp K>, <&kp LG(PERIOD)>, <&kp LG(LT)>, <&kp LG(GT)>;
         };
 
-        downKey: tap_dance_0 {
+        downKey: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <200>;
 
             // Move Down, Club Down, Putting Mode
             
             bindings = <&kp DOWN>, <&kp I>, <&kp U>;
         };
 
-        leftKey: tap_dance_0 {
+        leftKey: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <200>;
 
             // Move Left, Prev Hole
             
             bindings = <&kp LEFT>, <&kp N9>;
         };
 
-        rightKey: tap_dance_0 {
+        rightKey: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <200>;
 
             // Move Right, Next Hole
             
             bindings = <&kp RIGHT>, <&kp N0>;
         };
 
-        shotKey: tap_dance_0 {
+        shotKey: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <200>;
 
             // Mulligan, Shot Cam, Goto Target, Goto Ball, Hole Flyover, Free Flight Cam
             
@@ -63,10 +63,10 @@
         };
 
 
-        clearKey: tap_dance_0 {
+        clearKey: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <200>;
 
             // Clear Obstructions, Green Heatmap, Green Gridlines, Locate Pin, Scorecard
             
