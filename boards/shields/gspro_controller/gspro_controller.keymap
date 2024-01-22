@@ -17,9 +17,9 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
 
-            // Move Up, Club Up, + (start sim), - (start skytrak), _ (shutdown sim)
+            // Move Up, Club Up, Windows(Period)-StartSim, Windows(<)-StartSkytrak, Windows(>)-Shutdown, Bluetooth output
             
-            bindings = <&kp UP>, <&kp K>, <&kp LG(PERIOD)>, <&kp LG(LT)>, <&kp LG(GT)>;
+            bindings = <&kp UP>, <&kp K>, <&kp LG(PERIOD)>, <&kp LG(LT)>, <&kp LG(GT)>, <&out OUT_BLE>;
         };
 
         downKey: tap_dance_1 {
@@ -80,9 +80,9 @@
         compatible = "zmk,keymap";
 
         default_layer {
-                // Pin0         Pin1            Pin2        Pin3        Pin4        Pin5            Pin6
+                // Pin0         Pin1            Pin2        Pin3        Pin4        Pin5      
             bindings = <
-                &leftKey        &rightKey       &upKey      &downKey    &shotKey    &clearKey   &out OUT_BLE
+                &leftKey        &rightKey       &upKey      &downKey    &shotKey    &clearKey   
 	        >;
         };
     };
