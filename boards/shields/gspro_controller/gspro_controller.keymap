@@ -6,16 +6,85 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-//#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+
+        &out OUT_BLE
+        
+        upKey: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+
+            // Move Up, Club Up, + (start sim), - (start skytrak), _ (shutdown sim)
+            
+            bindings = <&kp UP>, <&kp K>, <&kp +>, <&kp ->, <&kp _>;
+        };
+
+        downKey: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+
+            // Move Down, Club Down, Putting Mode
+            
+            bindings = <&kp DOWN>, <&kp I>, <&kp U>;
+        };
+
+        leftKey: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+
+            // Move Left, Prev Hole
+            
+            bindings = <&kp LEFT>, <&kp 9>;
+        };
+
+        rightKey: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+
+            // Move Right, Next Hole
+            
+            bindings = <&kp RIGHT>, <&kp 0>;
+        };
+
+        shotKey: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+
+            // Mulligan, Shot Cam, Goto Target, Goto Ball, Hole Flyover, Free Flight Cam
+            
+            bindings = <&kp CTRL(M)>, <&kp F3>, <&kp 5>, <&kp O>, <&kp F5>, <&kp J>;
+        };
+
+
+        clearKey: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+
+            // Clear Obstructions, Green Heatmap, Green Gridlines, Locate Pin, Scorecard
+            
+            bindings = <&kp B>, <&kp Y>, <&kp D>, <&kp P>, <&kp T>;
+        };
+
+
+    };   
+
     keymap {
         compatible = "zmk,keymap";
         
         default_layer {
-                // Pin0    Pin1        Pin2      Pin3       Pin4    Pin5    Pin6    Pin 7   Pin 8   Pin 9    Pin 10
+                // Pin0         Pin1            Pin2        Pin3        Pin4        Pin5            Pin6
             bindings = <
-                &kp LEFT   &kp RIGHT   &kp UP    &kp DOWN   &kp B   &kp K   &kp I   &kp O   &kp Y   &kp J    &kp LC(M)
+                &leftKey        &rightKey       &upKey      &downKey    &shotKey    &clearKey
 	        >;
         };
     };

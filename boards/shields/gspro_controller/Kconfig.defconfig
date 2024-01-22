@@ -1,8 +1,8 @@
 
-if GSPRO_CONTROLLER
+if SIMCONTROLLER_GSPRO
 
 config ZMK_KEYBOARD_NAME
-	default "GSProController"
+	default "SimCtrlr (GSPro)"
 
 endif
 
