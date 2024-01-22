@@ -12,8 +12,6 @@
 / {
     behaviors {
 
-        &out OUT_BLE
-        
         upKey: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
