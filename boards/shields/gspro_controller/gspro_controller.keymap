@@ -80,9 +80,9 @@
         compatible = "zmk,keymap";
 
         default_layer {
-                // Pin0         Pin1            Pin2        Pin3        Pin4        Pin5      
+                // Pin0         Pin1            Pin2        Pin3        Pin4        Pin5   
             bindings = <
-                &kp a           &kp b           &kp c       &kp d       &kp e       &kp f
+                &kp A           &kp B           &kp C       &kp D       &kp E       &kp F     
 //                &leftKey        &rightKey       &upKey      &downKey    &shotKey    &clearKey   
 	        >;
         };
