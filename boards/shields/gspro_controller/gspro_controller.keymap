@@ -17,9 +17,9 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
 
-            // Move Up, Club Up, Windows(Period)-StartSim, Windows(<)-StartSkytrak, Windows(>)-Shutdown, Bluetooth output   
+            // Move Up, Club Up,  
             
-            bindings = <&kp UP>, <&kp K>, <&kp LG(PERIOD)>, <&kp LG(LT)>, <&kp LG(GT)>, <&out OUT_BLE>;
+            bindings = <&kp UP>, <&kp K>;
         };
 
         downKey: tap_dance_1 {
@@ -74,16 +74,27 @@
         };
 
 
+        mgmtKey: tap_dance_6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+
+             // Windows(Period)-StartSim, Windows(<)-StartSkytrak, Windows(>)-Shutdown, Bluetooth output, Clear All Bluetooth
+            
+            bindings = <&kp LG(PERIOD)>, <&kp LG(LT)>, <&kp LG(GT)>, <&out OUT_BLE>, <&bt BT_CLR>;
+        };
+
+
+
     };   
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-                // Pin0         Pin1            Pin2        Pin3        Pin4        Pin5   
+                // Pin0         Pin1            Pin2        Pin3        Pin4        Pin5        Pin6   
             bindings = <
-                &kp A    
-//                &leftKey        &rightKey       &upKey      &downKey    &shotKey    &clearKey   
+                   &leftKey     &rightKey       &upKey      &downKey    &mgmtKey    &clearKey   &shotKey
 	        >;
         };
     };
