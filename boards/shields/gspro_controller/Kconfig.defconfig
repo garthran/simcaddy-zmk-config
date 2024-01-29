@@ -1,8 +1,8 @@
 
-if SIMCENTER_GSPRO
+if SIMCADDY_GSPRO
 
 config ZMK_KEYBOARD_NAME
-	default "SimCntr (GSPro)"
+	default "SimCaddy (GSPro)"
 
 endif
 
